@@ -1,5 +1,9 @@
 {
   "name": "my-app",
+  "author": {
+    "name": "Ajay Joseph",
+    "email": "josepajay@gmail.com"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,11 +11,19 @@
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.3"
   },
+  "build": {
+    "appId": "TicToe",
+    "mac": {
+      "category": "Game"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +33,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "electron-builder": "^20.38.5"
+  }
 }
